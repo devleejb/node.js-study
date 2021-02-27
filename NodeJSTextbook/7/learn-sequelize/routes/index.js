@@ -6,6 +6,8 @@ const router = express.Router();
 router.get('/', async (req, res, next) => {
 	try {
 		const users = await User.findAll();
+		
+		// User 정보를 렌더링하여 응답한다.
 		res.render('sequelize', { users });
 	} catch (err) {
 		console.error(err);
