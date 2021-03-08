@@ -12,7 +12,7 @@ const pageRouter = require('./routes/page');
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
-app.set('veiw engine', 'html');
+app.set('view engine', 'html');
 nunjucks.configure('views', {
 	express: app,
 	watch: true,
